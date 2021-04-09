@@ -5,8 +5,8 @@ function calculate(entry, close) {
   const hoursEntry = entry.split(':');
   const hoursClose = close.split(':');
 
-  const totalHours = hoursClose[0] - hoursEntry[0];
-  const totalMinutes = hoursClose[1] - hoursEntry[1];
+  let totalHours = hoursClose[0] - hoursEntry[0];
+  let totalMinutes = hoursClose[1] - hoursEntry[1];
 
   if (totalMinutes < 0) {
     totalMinutes += 60;
@@ -18,13 +18,13 @@ function calculate(entry, close) {
 
   if (dt1.getTime() <= dt2.getTime()) {
 
-    return components(totalHours, totalMinutes);
+    return componentsText(totalHours, totalMinutes);
   }
 
-  return components();
+  return componentsText();
 }
 
-function components(value, otherValue) {
+function componentsText(value, otherValue) {
 
   let text = '';
   let messageValue = '';
@@ -34,6 +34,7 @@ function components(value, otherValue) {
     messageValue = 'Valor inválido!'
     return card(text, messageValue)
   }
+
   text = "Total de horas trabalhadas : ";
   messageValue = `${value} horas e ${otherValue} minutes `;
 
