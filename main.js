@@ -1,7 +1,6 @@
 window.addEventListener('load', start);
 
-function calculate(entry,close) {
-
+function calculate(entry, close) {
 
   const hoursEntry = entry.split(':');
   const hoursClose = close.split(':');
@@ -9,32 +8,42 @@ function calculate(entry,close) {
   const totalHours = hoursClose[0] - hoursEntry[0];
   const totalMinutes = hoursClose[1] - hoursEntry[1];
 
-  if(totalMinutes < 0){
+  if (totalMinutes < 0) {
     totalMinutes += 60;
-    totalHours -=1;
+    totalHours -= 1;
   }
 
-  const dt1 = new Date(1995,01,01,hoursEntry[0],hoursEntry[1]);
-  const dt2 = new Date(1995,01,01,hoursClose[0],hoursClose[1]);
-  
-  if( dt1.getTime() <= dt2.getTime() ){
-    
-  let title = `Total de horas trabalhadas :`  
-  let message = `${totalHours} horas e ${totalMinutes} minutos`;
+  const dt1 = new Date(1995, 01, 01, hoursEntry[0], hoursEntry[1]);
+  const dt2 = new Date(1995, 01, 01, hoursClose[0], hoursClose[1]);
 
-  return card(title, message);
+  if (dt1.getTime() <= dt2.getTime()) {
+
+    return components(totalHours, totalMinutes);
   }
-    
-   title = `Error :`
-   message = `Horas inválidas`;
-  
-  return card(title, message);
+
+  return components();
 }
 
-function card(title, message){
+function components(value, otherValue) {
+
+  let text = '';
+  let messageValue = '';
+
+  if (value === undefined || value === null) {
+    text = 'Error :'
+    messageValue = 'Valor inválido!'
+    return card(text, messageValue)
+  }
+  text = "Total de horas trabalhadas : ";
+  messageValue = `${value} horas e ${otherValue} minutes `;
+
+  return card(text, messageValue);
+}
+
+function card(title, message) {
 
   const appendId = document.querySelector('#cardMessage');
-  const label = document.createElement('label');
+  let label = document.createElement('label');
   label.textContent = `${title} ${message}`
 
   appendId.innerHTML = label.textContent;
@@ -45,8 +54,8 @@ function start() {
   const inputClose = document.querySelector('#hoursClose');
   const btnCalculate = document.querySelector('#btnCalculate');
 
-  btnCalculate.addEventListener('click', function(){
-    calculate(inputEntry.value,inputClose.value);
+  btnCalculate.addEventListener('click', function () {
+    calculate(inputEntry.value, inputClose.value);
   });
 }
 
