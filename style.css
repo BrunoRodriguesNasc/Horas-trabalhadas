@@ -1,0 +1,21 @@
+header{
+  display: flex;
+  justify-content: center;
+}
+
+.container-lg{
+  max-width: 200px !important;
+}
+
+.center{
+  outline: none;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.label-weight{
+  width: 200px !important;
+}
