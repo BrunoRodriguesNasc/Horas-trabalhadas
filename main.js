@@ -16,7 +16,7 @@ function calculate(entry, close) {
   const dt1 = new Date(1995, 01, 01, hoursEntry[0], hoursEntry[1]);
   const dt2 = new Date(1995, 01, 01, hoursClose[0], hoursClose[1]);
 
-  if (dt1.getTime() <= dt2.getTime()) {
+  if (dt1.getTime() < dt2.getTime()) {
 
     return componentsText(totalHours, totalMinutes);
   }
@@ -36,7 +36,7 @@ function componentsText(value, otherValue) {
   }
 
   text = "Total de horas trabalhadas : ";
-  messageValue = `${value} horas e ${otherValue} minutes `;
+  messageValue = `${value} horas e ${otherValue} minutos `;
 
   return card(text, messageValue);
 }
