@@ -7,35 +7,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="icon" type="image/png" href="/ahgoralogo.png" />
   <title>Desafio Ahgora</title>
 </head>
 
 <body>
-  <header>
-    <h1 class="display-1">Horas trabalhadas</h1>
-  </header>
-
-  <div class="container-lg">
-    <div class="row">
-      <div class="col-sm">
-        <div class="form-group row">
-          <label for="example-time-input" class="col-2 col-form-label label-weight">Hora entrada</label>
-          <input class="form-control" type="time" id="hoursEntry">
-        </div>
-        <div class="form-group row">
-          <label for="example-time-input" class="col-2 col-form-label label-weight">Hora saída</label>
-          <input class="form-control" type="time" id="hoursClose">
-        </div>
-      </div>
+  <div class="card text-center position-absolute top-50 start-50 translate-middle boxShadowCard" style="width: 50%">
+    <div class="card-header colorHeadCard">
+      <header>
+        <h1 class="display-1 titleCard"><strong>Horas trabalhadas</strong></h1>
+      </header>
     </div>
-  </div>
-  <div class="container text-center mt-3">
-  <button type="button" class="btn btn-success" id="btnCalculate">Calcular</button>
-</div>
-<div class="container text-center mt-1" id="cardMessage">
-  
-</div>
-  <script src="/main.js"></script>
+    <div class="card-body">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-group row">
+              <label for="example-time-input" class="col-2 col-form-label label-weight"><strong>Hora
+                  entrada</strong></label>
+              <input class="form-control" type="time" id="hoursEntry">
+            </div>
+            <div class="form-group row">
+              <label for="example-time-input" class="col-2 col-form-label label-weight"><strong>Hora
+                  saída</strong></label>
+              <input class="form-control" type="time" id="hoursClose">
+            </div>
+          </div>
+        </div>
+          <div class="container text-center mt-3">
+            <button type="button" class="btn btn-sucess colorBtn " id="btnCalculate">Calcular</button>
+          </div>
+        </div>
+        <span id="cardMessage"></span>
+      </div>
+      <script src="/main.js"></script>
 </body>
 
 </html>
