@@ -1,0 +1,19 @@
+{
+  "name": "desafio-ahgora",
+  "version": "1.0.0",
+  "description": "Um aplicativo para medir as horas trabalhadas , simples e composto apenas por JS/CSS/HTML\r Usando para estilização o frameWork boostrap para estilização de alguns componentes",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruno-ctrl/Horas-trabalhadas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruno-ctrl/Horas-trabalhadas/issues"
+  },
+  "homepage": "https://github.com/bruno-ctrl/Horas-trabalhadas#readme"
+}
