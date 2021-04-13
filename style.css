@@ -19,3 +19,39 @@ header{
 .label-weight{
   width: 200px !important;
 }
+
+#cardMessage{
+  color: black;
+  margin: 30px 0;
+}
+
+.colorBtn{
+  background-color: #04A777 !important;
+  color:white !important ;
+}
+
+.colorHeadCard{
+  background-color: #1E65F1 !important;
+  color: white;
+}
+
+.boxShadowCard{
+  box-shadow: rgb(230 230 230) 0px 0.1875rem 0.375rem !important;
+  border: 6px !important; 
+}
+
+.titleCard{
+  font-size: calc(0.75rem + 2.5vw)!important;
+}
+
+@media(min-width : 300px){
+  .card{
+    width: 330px !important;
+  }
+}
+
+@media(min-width : 1000px){
+  .card{
+    width: 600px !important;
+  }
+}
