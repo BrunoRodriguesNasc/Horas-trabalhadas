@@ -2,7 +2,7 @@
   "name": "desafio-ahgora",
   "version": "1.0.0",
   "description": "Um aplicativo para medir as horas trabalhadas , simples e composto apenas por JS/CSS/HTML\r Usando para estilização o frameWork boostrap para estilização de alguns componentes",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
